@@ -3,6 +3,6 @@ export const aboutData = {
   description1:
     "My name's Rohit pandey. I'm a Data Analyst based in Delhi, India.",
   description2:
-    "During the day I work as a developer and in the evening I help people on discord and also manage time to build my own projects. I spend my leisure hours writing code and exploring new technologies. I love to learn and explore new arenas.",
+    "I specialize in analyzing complex datasets to reveal actionable trends. My expertise lies in Python, SQL, and data visualization tools like Tableau and PowerBI. I enjoy transforming raw data into meaningful stories that impact strategy.",
   image: 1,
 };
