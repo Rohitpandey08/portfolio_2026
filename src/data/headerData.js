@@ -2,7 +2,7 @@ import resume from "../assets/pdf/resume.pdf";
 
 export const headerData = {
   name: "Rohit Pandey",
-  title: "JavaScript Developer",
+  title: "Data Analyst",
   strings: [
     "JavaScript Developer ",
     "Feel-Good Web Designer ",
@@ -13,6 +13,6 @@ export const headerData = {
   ],
   desciption:
     "A thinker by profession and a coding Lover by heart. An ambitious individual with a desire to succeed. A Football fanatic.",
-  image: "https://avatars.githubusercontent.com/u/47389183?v=4",
+  image: "https://avatars.githubusercontent.com/u/98464577?s=400&u=e33f018c780c150ea367011e30f90090969ce460&v=4",
   resumePdf: resume,
 };
