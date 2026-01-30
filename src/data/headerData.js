@@ -1,7 +1,7 @@
 import resume from "../assets/pdf/resume.pdf";
 
 export const headerData = {
-  name: "Pankaj Jain",
+  name: "Rohit Pandey",
   title: "JavaScript Developer",
   strings: [
     "JavaScript Developer ",
