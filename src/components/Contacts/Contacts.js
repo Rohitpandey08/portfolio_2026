@@ -4,6 +4,7 @@ import CloseIcon from "@material-ui/icons/Close";
 import axios from "axios";
 import isEmail from "validator/lib/isEmail";
 import { makeStyles } from "@material-ui/core/styles";
+import emailjs from "@emailjs/browser";
 import github from '../../assets/png/github.png';
 import instagram from '../../assets/png/instagram.png';
 import linkedin from '../../assets/png/linkedin.png';
@@ -37,14 +38,6 @@ function Contacts() {
   const [errMsg, setErrMsg] = useState("");
 
   const { theme } = useContext(ThemeContext);
-
-  const handleClose = (event, reason) => {
-    if (reason === "clickaway") {
-      return;
-    }
-
-    setOpen(false);
-  };
 
   const useStyles = makeStyles((t) => ({
     input: {
@@ -125,37 +118,59 @@ function Contacts() {
     },
   }));
 
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
+
   const classes = useStyles();
 
   const handleContactForm = (e) => {
     e.preventDefault();
 
-    if (name && email && message) {
-      if (isEmail(email)) {
-        const responseData = {
+    if (!name || !email || !message) {
+      setErrMsg("Please fill all fields");
+      setSuccess(false);
+      setOpen(true);
+      return;
+    }
+
+    // email validation
+    if (!isEmail(email)) {
+      setErrMsg("Invalid email");
+      setSuccess(false);
+      setOpen(true);
+      return;
+    }
+
+    emailjs
+      .send(
+        "service_leu26zg",
+        "template_qtrdupr",
+        {
           name: name,
           email: email,
           message: message,
-        };
-
-        axios.post(contactsData.sheetAPI, responseData).then((res) => {
-          console.log("success");
-          setSuccess(true);
-          setErrMsg("");
-
-          setName("");
-          setEmail("");
-          setMessage("");
-          setOpen(false);
-        });
-      } else {
-        setErrMsg("Invalid email");
+        },
+        "ukHUj4FRhwm56bmhj"
+      )
+      .then(() => {
+        setSuccess(true);
+        setErrMsg("");
         setOpen(true);
-      }
-    } else {
-      setErrMsg("Enter all the fields");
-      setOpen(true);
-    }
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((err) => {
+        console.error(err);
+        setSuccess(false);
+        setErrMsg("Message failed to send. Try again.");
+        setOpen(true);
+      });
   };
 
   return (
@@ -208,6 +223,7 @@ function Contacts() {
                   className={`form-message ${classes.message}`}
                 />
               </div>
+
 
               <div className="submit-btn">
                 <button type="submit" className={classes.submitBtn}>
