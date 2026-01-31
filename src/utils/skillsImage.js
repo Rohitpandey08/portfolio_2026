@@ -75,6 +75,10 @@ import unity from "../assets/svg/skills/unity.svg";
 import wolframalpha from "../assets/svg/skills/wolframalpha.svg";
 
 import canva from "../assets/svg/skills/canva.svg";
+import pandas from "../assets/svg/skills/pandas.png";
+import excel from "../assets/svg/skills/excel.png";
+import powerbi from "../assets/svg/skills/powerbi.png";
+import vscode from "../assets/svg/skills/vscode.png";
 
 export const skillsImage = (skill) => {
   const skillID = skill.toLowerCase();
@@ -229,6 +233,14 @@ export const skillsImage = (skill) => {
       return wolframalpha;
     case "canva":
       return canva;
+    case "pandas":
+      return pandas;
+    case "microsoft excel":
+      return excel;
+    case "power bi":
+      return powerbi;
+    case "visual studio code":
+      return vscode;
     default:
       break;
   }

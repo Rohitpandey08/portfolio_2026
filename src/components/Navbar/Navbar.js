@@ -134,6 +134,7 @@ function Navbar() {
     <div className="navbar">
       <div className="navbar--container">
         <h1 style={{ color: theme.secondary }}>{shortname(headerData.name)}</h1>
+        {/* <div></div> Spacer to keep Menu aligned right if needed, or just remove */}
 
         <IoMenuSharp
           className={classes.navMenu}
@@ -202,14 +203,14 @@ function Navbar() {
               </NavLink>
             </Fade>
 
-            <Fade left>
+            {/* <Fade left>
               <NavLink to="/#services" smooth={true} spy="true" duration={2000}>
                 <div className={classes.drawerItem}>
                   <BsFillGearFill className={classes.drawerIcon} />
                   <span className={classes.drawerLinks}>Services</span>
                 </div>
               </NavLink>
-            </Fade>
+            </Fade> */}
 
             <Fade left>
               <NavLink to="/#blog" smooth={true} spy="true" duration={2000}>

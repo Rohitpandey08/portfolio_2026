@@ -43,9 +43,29 @@ img{
     -webkit-user-select: none;
      -khtml-user-select: none; 
        -moz-user-select: none;
-        -ms-user-select: none; 
-            user-select: none; 
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background-color: #0F172A; /* Fallback */
+}
+
+/* Interface Improvements from Reference */
+.skill--box, .education-card, .experience-card, .project-card, .service-card, .blog-card, .contacts-form, .contacts-details {
+    border-radius: 16px !important;
+}
+
+button {
+    border-radius: 12px !important;
+}
+
+input, textarea {
+    border-radius: 8px !important;
 }
 
 

@@ -1,16 +1,15 @@
 export const skillsData = [
   "Python",
-  "SQL",
-  "Excel",
-  "Tableau",
-  "PowerBI",
-  "Pandas",
+  "MySQL",
+  "PostgreSQL",
+  "HTML",
   "Numpy",
-  "Matplotlib",
-  "Seaborn",
-  "R",
   "Git",
-  "Jupyter Notebook",
+  "Pandas",
+  "Microsoft Excel",
+  "Power BI",
+  "Visual Studio Code",
+  "Microsoft Office",
 ];
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.

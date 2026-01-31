@@ -4,15 +4,15 @@ import CloseIcon from "@material-ui/icons/Close";
 import axios from "axios";
 import isEmail from "validator/lib/isEmail";
 import { makeStyles } from "@material-ui/core/styles";
+import github from '../../assets/png/github.png';
+import instagram from '../../assets/png/instagram.png';
+import linkedin from '../../assets/png/linkedin.png';
+import twitter from '../../assets/png/twitter.png';
 import {
-  FaTwitter,
-  FaLinkedinIn,
-  FaGithub,
   FaYoutube,
   FaRedditAlien,
   FaStackOverflow,
   FaCodepen,
-  FaInstagram,
   FaGitlab,
   FaMediumM,
 } from "react-icons/fa";
@@ -82,18 +82,17 @@ function Contacts() {
     socialIcon: {
       width: "45px",
       height: "45px",
-      borderRadius: "50%",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
       fontSize: "21px",
-      backgroundColor: theme.primary,
+      backgroundColor: "transparent",
       color: theme.secondary,
       transition: "250ms ease-in-out",
       "&:hover": {
         transform: "scale(1.1)",
         color: theme.secondary,
-        backgroundColor: theme.tertiary,
+        backgroundColor: "transparent",
       },
     },
     detailsIcon: {
@@ -297,7 +296,7 @@ function Contacts() {
                   rel="noreferrer"
                   className={classes.socialIcon}
                 >
-                  <FaTwitter aria-label="Twitter" />
+                  <img src={twitter} alt="Twitter" style={{ width: '40px', height: '40px' }} />
                 </a>
               )}
               {socialsData.github && (
@@ -307,7 +306,7 @@ function Contacts() {
                   rel="noreferrer"
                   className={classes.socialIcon}
                 >
-                  <FaGithub aria-label="GitHub" />
+                  <img src={github} alt="Github" style={{ width: '40px', height: '40px' }} />
                 </a>
               )}
               {socialsData.linkedIn && (
@@ -317,7 +316,7 @@ function Contacts() {
                   rel="noreferrer"
                   className={classes.socialIcon}
                 >
-                  <FaLinkedinIn aria-label="LinkedIn" />
+                  <img src={linkedin} alt="LinkedIn" style={{ width: '40px', height: '40px' }} />
                 </a>
               )}
               {socialsData.instagram && (
@@ -327,7 +326,7 @@ function Contacts() {
                   rel="noreferrer"
                   className={classes.socialIcon}
                 >
-                  <FaInstagram aria-label="Instagram" />
+                  <img src={instagram} alt="Instagram" style={{ width: '40px', height: '40px' }} />
                 </a>
               )}
               {socialsData.medium && (
@@ -395,7 +394,6 @@ function Contacts() {
           </div>
         </div>
       </div>
-      <img src={theme.contactsimg} alt="contacts" className="contacts--img" />
     </div>
   );
 }

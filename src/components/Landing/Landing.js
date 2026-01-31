@@ -8,56 +8,50 @@ import { ThemeContext } from "../../contexts/ThemeContext";
 import { headerData } from "../../data/headerData";
 import { socialsData } from "../../data/socialsData";
 import Typewriter from "typewriter-effect";
-import {
-  FaTwitter,
-  FaLinkedin,
-  FaGithub,
-  FaYoutube,
-  FaBlogger,
-} from "react-icons/fa";
+import github from '../../assets/png/github.png';
+import instagram from '../../assets/png/instagram.png';
+import linkedin from '../../assets/png/linkedin.png';
+import twitter from '../../assets/png/twitter.png';
 
 function Landing() {
   const { theme, drawerOpen } = useContext(ThemeContext);
 
   const useStyles = makeStyles((t) => ({
     resumeBtn: {
-      color: theme.primary,
+      color: "#000",
+      backgroundColor: "transparent",
       borderRadius: "30px",
       textTransform: "inherit",
       textDecoration: "none",
-      width: "150px",
-      fontSize: "1rem",
-      fontWeight: "500",
+      width: "160px",
+      fontWeight: "600",
       height: "50px",
       fontFamily: "var(--primaryFont)",
-      border: `3px solid ${theme.primary}`,
+      border: "2px solid #000",
       transition: "100ms ease-out",
       "&:hover": {
-        backgroundColor: theme.tertiary,
-        color: theme.secondary,
-        border: `3px solid ${theme.tertiary}`,
+        backgroundColor: "#000",
+        color: "#fff",
       },
       [t.breakpoints.down("sm")]: {
         width: "180px",
       },
     },
     contactBtn: {
-      backgroundColor: theme.primary,
-      color: theme.secondary,
+      backgroundColor: "#000",
+      color: "#fff",
       borderRadius: "30px",
       textTransform: "inherit",
       textDecoration: "none",
-      width: "150px",
+      width: "160px",
       height: "50px",
-      fontSize: "1rem",
-      fontWeight: "500",
+      fontWeight: "600",
       fontFamily: "var(--primaryFont)",
-      border: `3px solid ${theme.primary}`,
+      border: "2px solid #000",
       transition: "100ms ease-out",
       "&:hover": {
-        backgroundColor: theme.secondary,
-        color: theme.tertiary,
-        border: `3px solid ${theme.tertiary}`,
+        backgroundColor: "transparent",
+        color: "#000",
       },
       [t.breakpoints.down("sm")]: {
         display: "none",
@@ -70,92 +64,70 @@ function Landing() {
   return (
     <div className="landing">
       <div className="landing--container">
-        <div
-          className="landing--container-left"
-          style={{ backgroundColor: theme.primary }}
-        >
-          <div className="lcl--content">
+
+        {/* LEFT SIDE - Black - Signature & Socials */}
+        <div className="landing--container-left">
+          <div className="landing--header">
+            {/* Name removed to avoid duplication with Navbar */}
+          </div>
+
+          <div className="landing--socials-left">
             {socialsData.linkedIn && (
               <a href={socialsData.linkedIn} target="_blank" rel="noreferrer">
-                <FaLinkedin
-                  className="landing--social"
-                  style={{ color: theme.secondary }}
-                  aria-label="LinkedIn"
-                />
+                <img src={linkedin} alt="LinkedIn" className="landing--social" style={{ width: '35px', height: '35px' }} />
               </a>
             )}
             {socialsData.github && (
               <a href={socialsData.github} target="_blank" rel="noreferrer">
-                <FaGithub
-                  className="landing--social"
-                  style={{ color: theme.secondary }}
-                  aria-label="GitHub"
-                />
+                <img src={github} alt="Github" className="landing--social" style={{ width: '35px', height: '35px' }} />
               </a>
             )}
             {socialsData.twitter && (
               <a href={socialsData.twitter} target="_blank" rel="noreferrer">
-                <FaTwitter
-                  className="landing--social"
-                  style={{ color: theme.secondary }}
-                  aria-label="Twitter"
-                />
+                <img src={twitter} alt="Twitter" className="landing--social" style={{ width: '35px', height: '35px' }} />
               </a>
             )}
-            {socialsData.youtube && (
-              <a href={socialsData.youtube} target="_blank" rel="noreferrer">
-                <FaYoutube
-                  className="landing--social"
-                  style={{ color: theme.secondary }}
-                  aria-label="YouTube"
-                />
+            {socialsData.instagram && (
+              <a href={socialsData.instagram} target="_blank" rel="noreferrer">
+                <img src={instagram} alt="Instagram" className="landing--social" style={{ width: '35px', height: '35px' }} />
               </a>
             )}
-            {socialsData.blogger && (
-              <a href={socialsData.blogger} target="_blank" rel="noreferrer">
-                <FaBlogger
-                  className="landing--social"
-                  style={{ color: theme.secondary }}
-                  aria-label="Blogger"
-                />
-              </a>
-            )}
+
           </div>
         </div>
+
+        {/* IMAGE - Centered */}
         <img
           src={headerData.image}
           alt=""
           className="landing--img"
           style={{
             opacity: `${drawerOpen ? "0" : "1"}`,
-            borderColor: theme.secondary,
+            borderColor: '#eaeaea',
           }}
           draggable="false"
         />
-        <div
-          className="landing--container-right"
-          style={{ backgroundColor: theme.secondary }}
-        >
-          <div className="lcr--content" style={{ color: theme.tertiary }}>
-            {/* <h6>{headerData.title}</h6> */}
-            <h6>
+
+        {/* RIGHT SIDE - Gray - Main Text */}
+        <div className="landing--container-right">
+          <div className="lcr--content">
+
+            <h6 style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#555', fontSize: '1.2rem', fontWeight: '500' }}>
+              <span style={{ color: theme.primary, fontSize: '1.2rem', marginRight: '5px' }}>|</span>
               <Typewriter
                 options={{
                   strings: headerData.strings,
                   autoStart: true,
                   loop: true,
-                }}
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString("Web Developer")
-                    .pauseFor(1000)
-                    .deleteAll()
-                    .start();
+                  delay: 50,
+                  deleteSpeed: 20,
                 }}
               />
             </h6>
-            <h1>{headerData.name}</h1>
-            <p>{headerData.desciption}</p>
+
+            <h1 style={{ color: '#222' }}>{headerData.name}</h1>
+
+            <p style={{ color: '#444' }}>{headerData.desciption}</p>
 
             <div className="lcr-buttonContainer">
               {headerData.resumePdf && (
@@ -165,15 +137,16 @@ function Landing() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Button className={classes.resumeBtn}>Download CV</Button>
+                  <Button className={classes.resumeBtn}>View Resume</Button>
                 </a>
               )}
               <NavLink to="/#contacts" smooth={true} spy="true" duration={2000}>
-                <Button className={classes.contactBtn}>Contact</Button>
+                <Button className={classes.contactBtn}>Let’s Talk</Button>
               </NavLink>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );
