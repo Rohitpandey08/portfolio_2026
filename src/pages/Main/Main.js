@@ -11,7 +11,7 @@ import {
   Education,
   Experience,
   Contacts,
-  Projects,
+  // Projects,
   Services,
   Achievement,
 } from "../../components";
