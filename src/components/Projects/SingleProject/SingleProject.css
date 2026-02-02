@@ -47,6 +47,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    z-index: 10;
 }
 
 .project--showcaseBtn>a {

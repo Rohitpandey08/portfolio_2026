@@ -13,8 +13,8 @@ export const projectsData = [
     projectName: "E-Commerce-Order-Analytics-Project",
     projectDesc: "Using structured SQL queries, the analysis answers critical business questions around customer behavior, revenue performance, product trends, and growth patterns.",
     tags: ["Data Analytics", "E-Commerce"],
-    code: "",
-    demo: "",
+    code: "https://github.com/Rohitpandey08/E-Commerce-Order-Analytics-Project",
+    demo: "https://github.com/Rohitpandey08/E-Commerce-Order-Analytics-Project",
     image: ecommerce,
   },
   {
@@ -22,8 +22,8 @@ export const projectsData = [
     projectName: "Zepto-E-commerce-Data-Analyst-Project",
     projectDesc: "Wrote business-focused SQL queries to analyze discounts, inventory weight, potential revenue, value-for-money products, and category-level performance",
     tags: ["SQL", "Data Analysis", "Zepto"],
-    code: "",
-    demo: "",
+    code: "https://github.com/Rohitpandey08/Zepto-E-commerce-SQL-Data-Analyst-Project",
+    demo: "https://github.com/Rohitpandey08/Zepto-E-commerce-SQL-Data-Analyst-Project",
     image: zepto,
   },
 ];
