@@ -44,11 +44,18 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                 <div className='projectContent'>
                     <h2
                         id={name.replace(' ', '-').toLowerCase()}
-                        style={{ color: theme.tertiary }}
+                        style={{ color: '#FFFFFF' }}
                     >
                         {name}
                     </h2>
-                    <img src={image ? image : placeholder} alt={name} />
+                    <img
+                        src={image ? image : placeholder}
+                        alt={name}
+                        style={
+                            id === 1 ? { transform: 'translate(-10%, 0) scale(1.4)' } :
+                                { transform: 'scale(1.4)' }
+                        }
+                    />
                     <div className='project--showcaseBtn'>
                         <a
                             href={demo}
@@ -58,8 +65,8 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                             aria-labelledby={`${name
                                 .replace(' ', '-')
                                 .toLowerCase()} ${name
-                                .replace(' ', '-')
-                                .toLowerCase()}-demo`}
+                                    .replace(' ', '-')
+                                    .toLowerCase()}-demo`}
                         >
                             <FaPlay
                                 id={`${name
@@ -77,8 +84,8 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                             aria-labelledby={`${name
                                 .replace(' ', '-')
                                 .toLowerCase()} ${name
-                                .replace(' ', '-')
-                                .toLowerCase()}-code`}
+                                    .replace(' ', '-')
+                                    .toLowerCase()}-code`}
                         >
                             <FaCode
                                 id={`${name

@@ -7,7 +7,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1.4rem 2rem;
+    padding: 1.4rem 1rem;
     position: relative;
     cursor: pointer;
     overflow: hidden;
@@ -22,7 +22,7 @@
     height: 100%;
 }
 
-.projectContent > h2 {
+.projectContent>h2 {
     font-family: var(--primaryFont);
     font-style: normal;
     font-weight: 600;
@@ -31,13 +31,14 @@
     text-align: center;
 }
 
-.projectContent > img {
+.projectContent>img {
     width: 100%;
-    height: 60%;
+    height: 90%;
+    object-fit: contain;
     transition: opacity 0.7s 0.3s;
 }
 
-.singleProject:hover img{
+.singleProject:hover img {
     opacity: 0;
 }
 
@@ -48,7 +49,7 @@
     width: 100%;
 }
 
-.project--showcaseBtn > a {
+.project--showcaseBtn>a {
     cursor: pointer;
     text-decoration: none;
     transition: transform 0.5s 0.3s;
@@ -59,13 +60,13 @@
 }
 
 
-.singleProject .project--desc{
+.singleProject .project--desc {
     position: absolute;
     width: 95%;
     height: 160px;
     left: 0;
     top: 0;
-    transform: translate(-110%,40%);
+    transform: translate(-110%, 40%);
     padding: 15px;
     border-radius: 0 20px 20px 0;
     transition: transform 0.9s;
@@ -75,12 +76,12 @@
     justify-content: center;
     font-family: var(--primaryFont);
 }
-  
-.singleProject:hover .project--desc{
-    transform: translate(-2%,40%);
+
+.singleProject:hover .project--desc {
+    transform: translate(-2%, 40%);
 }
-  
-.singleProject .project--lang{
+
+.singleProject .project--lang {
     position: absolute;
     bottom: 20px;
     right: 0;
@@ -95,14 +96,14 @@
     transition: transform 0.5s 0.3s;
     padding: 0.825rem;
 }
-  
-.singleProject:hover .project--lang{
+
+.singleProject:hover .project--lang {
     transform: translateX(0);
 }
 
-.project--lang > span {
+.project--lang>span {
     font-family: var(--primaryFont);
     font-weight: 500;
-    word-break: break-word; 
+    word-break: break-word;
     line-height: 100%;
 }

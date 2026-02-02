@@ -11,7 +11,7 @@ import {
   Education,
   Experience,
   Contacts,
-  // Projects,
+  Projects,
 } from "../../components";
 import { headerData } from "../../data/headerData";
 
@@ -26,8 +26,8 @@ function Main() {
       <Landing />
       <About />
       <Experience />
-      {/* <Achievement />
-      <Projects /> */}
+      <Projects />
+      {/* <Achievement /> */}
       <Skills />
       {/* <Services /> */}
       <Education />
