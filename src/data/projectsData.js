@@ -3,6 +3,7 @@
 import ecommerce from "../assets/png/ecommerce.png";
 // import four from "../assets/svg/projects/four.svg";
 import zepto from "../assets/png/zepto.png";
+import personal_finance from "../assets/png/personal_finance.png";
 // import six from "../assets/svg/projects/six.svg";
 // import seven from "../assets/svg/projects/seven.svg";
 // import eight from "../assets/svg/projects/eight.svg";
@@ -25,6 +26,15 @@ export const projectsData = [
     code: "https://github.com/Rohitpandey08/Zepto-E-commerce-SQL-Data-Analyst-Project",
     demo: "https://github.com/Rohitpandey08/Zepto-E-commerce-SQL-Data-Analyst-Project",
     image: zepto,
+  },
+  {
+    id: 3,
+    projectName: "Personal Finance Expense Analysis",
+    projectDesc: "An end-to-end data analysis project using Python and pandas to analyze transaction-level personal expense data, identify spending patterns, cost drivers, and high-spend periods, and generate actionable budgeting insights.",
+    tags: ["Python", "Pandas", "NumPy", "Matplotlib", "Jupyter Notebook"],
+    code: "https://github.com/Rohitpandey08/personal-finance-expense-analysis",
+    demo: "https://github.com/Rohitpandey08/personal-finance-expense-analysis",
+    image: personal_finance,
   },
 ];
 //   {
