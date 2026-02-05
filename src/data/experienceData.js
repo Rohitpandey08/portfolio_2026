@@ -2,7 +2,7 @@ export const experienceData = [
   {
     id: 1,
     company: "The Hooting Owl Café (Independent Business)",
-    jobtitle: "Operations Manager",
+    jobtitle: "Owner & Operations Manager",
     startYear: "Apr 2024",
     endYear: "May 2025",
   },
