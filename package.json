@@ -2,7 +2,6 @@
   "name": "developer-portfolio",
   "version": "0.1.0",
   "homepage": ".",
-  ,
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
