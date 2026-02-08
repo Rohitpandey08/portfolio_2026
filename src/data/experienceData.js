@@ -1,10 +1,10 @@
 export const experienceData = [
   {
     id: 1,
-    company: "The Hooting Owl Café (Independent Business)",
-    jobtitle: "Owner & Operations Manager",
+    company: "HireX Corp",
+    jobtitle: "Data Analyst",
     startYear: "Apr 2024",
-    endYear: "May 2025",
+    endYear: "Present",
   },
   {
     id: 2,

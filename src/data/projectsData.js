@@ -7,6 +7,7 @@ import personal_finance from "../assets/png/personal_finance.png";
 // import six from "../assets/svg/projects/six.svg";
 // import seven from "../assets/svg/projects/seven.svg";
 // import eight from "../assets/svg/projects/eight.svg";
+import automated_cleaning_pipeline from "../assets/png/automated_cleaning_pipeline.png";
 
 export const projectsData = [
   {
@@ -35,6 +36,15 @@ export const projectsData = [
     code: "https://github.com/Rohitpandey08/personal-finance-expense-analysis",
     demo: "https://github.com/Rohitpandey08/personal-finance-expense-analysis",
     image: personal_finance,
+  },
+  {
+    id: 4,
+    projectName: "Automated Data Cleaning Pipeline",
+    projectDesc: "A production-style Python automation pipeline that cleans raw Excel and CSV files and generates analysis-ready datasets with schema validation.",
+    tags: ["Python", "Pandas", "OpenPyXL"],
+    code: "https://github.com/Rohitpandey08/automated-data-cleaning-pipeline",
+    demo: "https://github.com/Rohitpandey08/automated-data-cleaning-pipeline",
+    image: automated_cleaning_pipeline,
   },
 ];
 //   {
