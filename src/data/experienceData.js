@@ -1,10 +1,10 @@
 export const experienceData = [
   {
     id: 1,
-    company: "HireX Corp",
-    jobtitle: "Data Analyst",
+    company: "The Hooting Owl Cafe",
+    jobtitle: "Owner & Operations Manager",
     startYear: "Apr 2024",
-    endYear: "Present",
+    endYear: "Oct 2025",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ export const experienceData = [
   {
     id: 4,
     company: "IBM",
-    jobtitle: "Junior Data Analyst",
+    jobtitle: "Data Analyst",
     startYear: "Oct 2017",
     endYear: "Jul 2019",
   },

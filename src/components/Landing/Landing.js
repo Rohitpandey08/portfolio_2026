@@ -133,7 +133,6 @@ function Landing() {
               {headerData.resumePdf && (
                 <a
                   href={headerData.resumePdf}
-                  download="RohitPandey_DATA_ANALYST.pdf"
                   target="_blank"
                   rel="noreferrer"
                 >
